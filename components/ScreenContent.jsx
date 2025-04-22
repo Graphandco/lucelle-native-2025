@@ -1,12 +1,15 @@
 import { Text, View } from 'react-native';
 
 import { EditScreenInfo } from './EditScreenInfo';
+import { WhiteText, PrimaryText } from './ui/CustomText';
 
 export const ScreenContent = ({ title, path, children }) => {
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
-      <Text className="text-red-500">This is a screen content !</Text>
+    <View className="bg-background flex-1 items-center justify-center">
+      <Text className="text-xl font-bold">{title}</Text>
+      <PrimaryText>Test</PrimaryText>
+      <WhiteText>{title}</WhiteText>
+      <WhiteText>This is a screen content !!</WhiteText>
       <View className={styles.separator} />
       <EditScreenInfo path={path} />
       {children}
