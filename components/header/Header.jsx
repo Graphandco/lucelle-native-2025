@@ -2,7 +2,7 @@ import { Text, View } from 'react-native';
 import { Image } from 'react-native';
 import { WhiteText, PrimaryText } from '../ui/CustomText';
 
-export const Header = ({}) => {
+export const Header = ({ session }) => {
   return (
     <View className="bg-background flex flex-row items-center justify-between px-6 py-3">
       <View className="flex flex-row items-center gap-3">
@@ -11,6 +11,7 @@ export const Header = ({}) => {
       </View>
       <View>
         <WhiteText>Menu</WhiteText>
+        <WhiteText>{session?.user?.email}</WhiteText>
       </View>
     </View>
   );
