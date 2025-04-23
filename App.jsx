@@ -12,6 +12,7 @@ import HomeScreen from './screens/HomeScreen';
 import AuthScreen from './screens/AuthScreen';
 
 import './global.css';
+import { View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -59,7 +60,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <View className="bg-background flex-1">
       <Header session={session} />
       <NavigationContainer>
         {session ? (
@@ -72,6 +73,6 @@ export default function App() {
       </NavigationContainer>
 
       <StatusBar style="light" backgroundColor="#1e293b" translucent={false} />
-    </>
+    </View>
   );
 }
